@@ -1,0 +1,109 @@
+#menubar {
+    background-color: whitesmoke;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: -20px;
+    margin: -10px;
+    font-family: 'Anton', sans-serif;
+    margin: -8px;
+    margin-bottom: 30px;
+}
+
+#fejlec {
+    color: whitesmoke;
+    text-align: center;
+    margin-top: -20px;
+    margin:auto;
+    font-size: 10px;
+    margin: -8px;
+    width:unset;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: unset;
+    background-image: linear-gradient(to right, rgb(0, 255, 21), rgb(0, 255, 55) , rgb(0, 255, 136) , rgb(0, 217, 255));
+    background-size: 1000% 1000%;
+  
+  -webkit-animation: rainbow 18s ease infinite;
+  -z-animation: rainbow 18s ease infinite;
+  -o-animation: rainbow 18s ease infinite;
+    animation: rainbow 18s ease infinite;}
+  
+  @-webkit-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-moz-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-o-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @keyframes rainbow { 
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  } 
+
+.body {
+margin-top: 100px;
+
+}
+
+a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    
+}
+a:hover {
+    color:dimgray;
+
+}
+
+
+.textbubble {
+    margin-top: 20px;
+    background: #efefef;
+    border-radius: 4px;
+    font-size: 20px;
+    line-height: 1.3;
+    margin: auto;
+    max-width: 900px;
+    padding: 15px;
+    position:unset;
+    text-align: center;
+}
+
+#cimtemak {
+    font-family: 'Anton', sans-serif;
+}
+
+.tavolsag {
+    margin-left: 20px;
+}
+
+
+#bubblecim {
+    text-align: center;
+    font-size: 25px;
+}
+
+#lefttext {
+    text-align: left;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+#focim {
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+}

