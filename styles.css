@@ -116,3 +116,44 @@ body {
     }
   }
 
+  #lablec {
+    color: whitesmoke;
+    text-align: center;
+    margin-top: auto;
+    margin:auto;
+    font-size: 10px;
+    margin: -8px;
+    width:unset;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: unset;
+    background-image: linear-gradient(to right, rgb(0, 255, 21), rgb(0, 255, 55) , rgb(0, 255, 136) , rgb(0, 217, 255));
+    background-size: 1000% 1000%;
+  
+  -webkit-animation: rainbow 18s ease infinite;
+  -z-animation: rainbow 18s ease infinite;
+  -o-animation: rainbow 18s ease infinite;
+    animation: rainbow 18s ease infinite;}
+  
+  @-webkit-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-moz-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-o-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @keyframes rainbow { 
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  } 
