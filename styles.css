@@ -107,3 +107,10 @@ body {
     text-align: center;
     font-family: 'Anton', sans-serif;
 }
+
+@media all and (min-width:800px){
+    .pg{
+      width:800px;
+      margin:0 auto;
+    }
+  }
