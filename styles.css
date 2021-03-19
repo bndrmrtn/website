@@ -108,7 +108,7 @@ body {
     font-family: 'Anton', sans-serif;
 }
 
-@media all and (min-width:800px){
+@media all and (max-width:756px){
     .pg{
       width:800px;
       margin:0 auto;
