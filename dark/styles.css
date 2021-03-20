@@ -120,3 +120,19 @@ body {
 h1 {
     color: whitesmoke;
 }
+
+
+.gomb {
+    color: rgb(255, 255, 255);
+    background-color: rgb(24, 24, 24);
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    height: 40px;
+    width: 150px;
+}
+
+.gomb:hover {
+    background-color: whitesmoke;
+    color: black;
+}
