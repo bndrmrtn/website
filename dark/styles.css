@@ -108,6 +108,7 @@ body {
 #focim {
     text-align: center;
     font-family: 'Anton', sans-serif;
+    color: whitesmoke;
 }
 
 @media all and (max-width: 500px){
