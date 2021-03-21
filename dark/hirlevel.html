@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://w3schools.com/lib/w3.css"/>
     <script src="https://kit.fontawesome.com/75724ff95e.js" crossorigin="anonymous"></script>
     <head>
-        <title>Főoldal</title>
+        <title>Hírlevél</title>
         <meta name="viewport" content="width=device-width,initial"/>
         <meta charset="UTF-8">
         <meta name="description" content="Programozás, hackelés">
@@ -29,35 +29,33 @@
             <div class="menu">
               <button class="menugomb">Menü</button>
               <div class="menutartalom">
+                <a href="index.html">Főoldal</a>
                 <a href="temak.html">Témák</a>
-                <a href="hirlevel.html">Hírlevél</a>
-                <a href="dark/index.html">Sötét mód <i class="fas fa-moon"></i></a>
+                <a href="../hirlevel.html">Világos mód <i class="fas fa-sun"></i></a>
               </div>
             </div>
           </div>
   
 
-        <h1 id="focim">Főoldal</h1>
-
-        <div class="textbubble">
-            <p><strong>Üdvözöllek a weboldalamon</strong></p>
-            <p>Itt lesznek az infók a közeljövőben.</p>
-            <br>
-          </div>
           <br>
           <div class="textbubble">
-              <h2>Visszajelzés</h2>
-            <form action="https://formsubmit.co/memdoboz@gmail.com" method="POST">
-                <input type="hidden" name="_subject" value="bndrmrtn új üzenet">
-                <textarea id="story" name="name" rows="3" cols="24" placeholder="Üzenet" class="form__input" required></textarea>
-                <br>
-                <input placeholder="Email cím" type="email" name="email" required class="form__input">
-                <br>
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://bndrmrtn.github.io/website/visszajelzes/visszajelzes.html">
-                <button type="submit" class="gomb">Küldés</button>
-            </form>
-          </div>
+            <h2>Hírlevél</h2>
+          <form action="https://formsubmit.co/memdoboz@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="hírlevél">
+            <br>
+            <input placeholder="Név" type="name" name="name" required class="form__input" required>
+            <br>
+            <input placeholder="Email cím" type="email" name="email" required class="form__input" required>
+            <br>
+            <input type="hidden" name="_captcha" value="false">
+            <button type="submit" class="gomb">Feliratkozok</button>
+        </form>
+        </div>
+            <br>
+            <br>
+            <br>
+        
+        
           <br>
           <div id="fejlec">
             <br>

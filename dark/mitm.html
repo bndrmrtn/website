@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://w3schools.com/lib/w3.css"/>
+    <script src="https://kit.fontawesome.com/75724ff95e.js" crossorigin="anonymous"></script>
+    <head>
+        <title>MiTM támadás</title>
+        <meta name="viewport" content="width=device-width,initial"/>
+        <meta charset="UTF-8">
+        <meta name="description" content="Programozás, hackelés">
+        <meta name="keywords" content="Linux, Kali linux, hacking, hackelés, MiTM, ARP, poisoning, Magyarul">
+        <meta name="author" content="Martin Binder">
+    </head>
+    <body>
+        <div id="fejlec">
+            <br>
+            <h1><b>bndrmrtn</b></h1>
+            <br>
+        </div>
+
+        <!--<div id="menubar">
+            <a href="temak.html">Témák</a><br><a href="dark/index.html"> Sötét mód</a>
+        </div>-->
+        <div id="menubar">
+            <div class="menu">
+              <button class="menugomb">Menü</button>
+              <div class="menutartalom">
+                <a href="index.html">Főoldal</a>
+                <a href="temak.html">Témák</a>
+                <a href="hirlevel.html">Hírlevél</a>
+                <a href="../mitm.html">Világos mód <i class="fas fa-sun"></i></a>
+              </div>
+            </div>
+          </div>
+
+        <div class="textbubble">
+            <p><strong>MiTM támadás</strong></p>
+            <p>Mit is jelent pontosan a MiTM attack? Ez azt jelenti, hogy Man in The Middle, vagyis ermber a középpontban. Ha elolvasod az egész cikket tisztába leszel, hogy mi is a MiTM támadás pontosan és, hogyan lehetsz te is a middle man.</p>
+            <br>
+          </div>
+          <br>
+          <div class="textbubble" id="lefttext">
+            <p>A lényege az MiTM támadásnak, hogy a támadó számítógépén keresztül fog menni minden egyes adat amit a te eszközöd és a router komunikál.
+              Viszont nyugi nem kell annyira félni, mert a legtöbb adatod kódolással védett, de nem mindegyik. Egy szimpla http bejelentkezéses oldal adatait egyszerűbb ellopni mint gondolnád.<br>
+              Mielőtt belevágnánk iratkozz fel az oldal hírlevelére, ha tetszenek a tartalmak :)<br>
+              <b><a href="hirlevel.html">Feliratkozok a hírlevélre</a></b>
+            </p>
+          </div>
+          <br>
+          <div class="textbubble">
+            <h2>Kellékek:</h2>
+            <p id="lefttext">Mindenek előtt kelleni fog egy Linux (Ajánlott a Kali Linux, de egy Ubuntu vagy bármilyen Debian is 
+            megteszi csak arra még le kell telepítened a következőket:           
+            </p>
+            <ul id="lefttext">
+                <li>sudo apt-get install ettercap</li>
+                <li>Wireshark teleítése</li>
+              </ul>
+              <p id="lefttext">Ha nem szeretnél dualboot-os számítógépet van megoldás, használj <a href="https://www.virtualbox.org/">VirtualBox-ot</a>.</p>
+            </div>
+          <br>
+          <div class="textbubble" id="lefttext">
+            <p>Mostmár elkezdhetjük a támadást:)<br>
+            <b>CSAK SAJÁT HÁLÓZATON PRÓBÁLD KI! NEM VÁLLALOK FELELŐSÉGET SEMMILYEN BŰNCSELEKMÉNYÉRT!</b></p>
+            <br>
+            <p>Nyiss egy terminált és írd be a következő parancsot:
+              <ul>
+                <li>ettercap -T -S -i wlan0 -M arp:remote /wifi router ip címe//</li>
+              </ul>
+              <p>Most ezzel a paranccsal át lett írányítva az egész wifi trafick a te számítógépeden keresztül a routerhez.<br>
+              Most nyisd meg a wireshark nevű appot és menj rá a wlan0-ra.<br>
+            Ha rámentél rengeteg IP címet és adatot fogsz látni, de ne aggódj írd be a felső mezőbe, hogy http ezzel leszűkítve a kereséseket
+          </p>
+            </p>
+          </div>
+          <div class="textbubble">
+            <br><a href="../images/wiresharkhttp.png"><img src="../images/wiresharkhttp.png"></a>
+            <p id="lefttext">Ha ezt beírtad akkor mostmár csak a http requestes oldalakat fogod látni és az http-s oldalak kiírják az adatokat;)<br>
+            Ennek az oldalnak a segítségével letesztelheted, hogy működik-e: <a href="http://testphp.vulnweb.com/login.php">http://testphp.vulnweb.com/login.php</a><br>
+            ha bejelentkeztél random adatokkal akkor meg fog jelenni a bejelentkezési tevékenységed, ha azt a wifit használod amit az ettercap-nél használtál.
+          Na de hogyan is nézzük meg, hogy milyen adatokkal jelentkeztél be? Jobbclick és a következő képen láthatod, hogy hogyan jutsz el az adatokig:</a>
+            </p>
+            <a href="../images/wireshark.png"><img src="../images/wireshark.png" height="30%" width="30%"></a>
+          </div>
+          <br>
+          <div class="textbubble">
+            <p id="lefttext">Ha rámentél a Http Stream-re akkor már csak ki kell keresned az adatokat:</p>
+            <a href="../images/wiresharkadatok.jpg"><img src="../images/wiresharkadatok.jpg" height="30%" width="30%"></a>
+            <p id="lefttext">Igazából ennyi is lett volna köszi, hogy elolvastad:)</p>
+          </div>
+          <br>
+          <br>
+          <div id="fejlec">
+            <br>
+                <p><a target="blank" href="https://www.youtube.com/channel/UCUrtasPlnqhbGDHUhqR1MIA"><i class="fab fa-youtube fa-3x"></i></a><a href="https://instagram.com/bndrmrtn" target="blank"><i class="fab fa-instagram fa-3x"></i></a> </p>
+            <br>
+            </div>
+
+
+
+    </body>
+
+
+</html>
