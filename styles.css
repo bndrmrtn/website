@@ -195,8 +195,8 @@ body {
 .menu:hover .menutartalom {display: block;}
 
 .menu:hover .menugomb {
-    background-color: #000000;
-    color: whitesmoke;
+    background-color: #d1d1d1;
+    color: rgb(0, 0, 0);
 
 
 
@@ -206,7 +206,7 @@ body {
 
 .menugomb {
     color: black;
-    background-color: rgb(214, 213, 213);
+    background-color: whitesmoke;
     padding: 16px;
     font-size: 16px;
     border: none;
