@@ -22,7 +22,7 @@
     top: 0;
     bottom: 0;
     position: unset;
-    background-image: linear-gradient(to right, rgb(0, 255, 21), rgb(0, 255, 55) , rgb(0, 255, 136) , rgb(0, 217, 255));
+    background-image: linear-gradient(to right, rgb(32, 32, 32), rgb(0, 0, 0) , rgb(24, 24, 24) , rgb(73, 73, 73));
     background-size: 1000% 1000%;
   
   -webkit-animation: rainbow 18s ease infinite;
