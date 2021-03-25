@@ -232,3 +232,17 @@ body {
     font-size: 50px;
     font-family: 'Anton', sans-serif;
 }
+
+.blinking{
+    animation:blinkingText 3s infinite;
+}
+@keyframes blinkingText{
+    50%{     color: rgb(87, 86, 86);    }
+    51%{     color: rgb(102, 102, 102);    }
+    52%{     color: rgb(51, 50, 50);    }
+    53%{     color: rgb(99, 98, 98);    }
+    54%{     color: rgb(19, 18, 18);    }
+    55%{     color: rgb(63, 62, 62);    }
+    70%{    color: rgb(94, 93, 93); }
+    100%{   color: #000;    }
+}
